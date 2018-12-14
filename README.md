@@ -32,7 +32,7 @@ Tabulate - Install with git. Command:
 * *Friðrik Snær Ómarsson* - Cs. Student
 * *Matthías Finnur Vignisson* - Cs. Student
 
-#Github Repositories
+## Github Repositories
 
 The following repositories were used for this project
 
