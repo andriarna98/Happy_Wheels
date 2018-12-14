@@ -20,6 +20,7 @@ Tabulate - Module used for formatting text in this project
 
 tqdm - Download and instructions:
 https://pypi.org/project/tqdm/
+
 Tabulate - Install with git. Command:
 "pip install tabulate"
 
@@ -39,7 +40,6 @@ https://github.com/andriarna98/Happy_Wheels
 
 https://github.com/pker98/Happy-Wheels-V2
 
-https://github.com/fridriks98/Happy-Wheels-final
 
 
 ## Acknowledgments
