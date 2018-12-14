@@ -54,7 +54,7 @@ class Print_rent_menu:
         print("\t\t\t\t  " + size_string)  # Kallar á samansettan streng
         print(available_car_string) # Kallar á samansettan streng
         print(underline)
-        choice = input("\t\t\tChoose your desired car: ").lower()
+        choice = input("\t\t\tChoose your desired car number: ").lower()
 
         return choice
         
@@ -77,7 +77,7 @@ class Print_rent_menu:
         print("\t\t\t1. GPS ...5.000 kr.")
         print("\t\t\t2. Baby chair ...1.000 kr.")   # Breyta í e-ð annað
         print("\t\t\t3. Insurance (extra) ...6.500 kr.\n")
-        print("\t\t\tPress 'n' to continue to check out")
+        print("\t\t\tPress 'c' to continue to check out.\n\t\t\tTo remove a selected feature press the assigned number again.")
         print(underline)
         choice = input("\t\t\t\tChoose an option: ")
         

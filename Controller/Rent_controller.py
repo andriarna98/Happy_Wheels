@@ -123,11 +123,11 @@ class Rent_controller:
                     self.menu, self.page = self.get_format.feature_format()
                     choice = self.__rent_menu.Page_6(self.menu, self.page, self.underline)
                     Valid, Page = self.__Rent_valid.Check_feature(choice, Page)
-                    if Valid and choice != "n":
+                    if Valid and choice != "c":
                         self.feature_list = self.__Rent_service.add_features(choice)
                         # Makes string of the features added
                         self.feature_string = self.__Rent_service.make_feature_string(choice)
-                    elif Valid and choice == "n":
+                    elif Valid and choice == "c":
                         Page += 1 # Moves to next page
                         break
                     elif not Valid and choice not in ("x", "p", "m") and Page != 13:

@@ -86,6 +86,7 @@ class Salesman_service:
         return order_string
             
     def salesman_ID_pw(self,ID, pw):
+        """Takes in pw and id from input and checks if it matches the salesman repository"""
         valid = False
         salesman_dict = self.salesman_info.get_salesmen()
         for key, value in salesman_dict.items():
@@ -97,6 +98,8 @@ class Salesman_service:
         return valid
 
     def change_pw(self, new_pw):
+        """Id is the key in the salesman dictionary, we use the logged in salesman id to find him in the dictionary and update
+        his password by using the change_pw function in the salesman model"""
         salesman_dict = self.salesman_info.get_salesmen()
         for key, value in salesman_dict.items():
             if key == self.salesman_id:
@@ -120,6 +123,7 @@ class Salesman_service:
         return self.log_repo.Read_repo()
     
     def delete_customer(self, customer):
+        """Deletes customer if the email input matches the customer database. Then we update the customer repository."""
         cust_dict = self.customer_info.get_customers()
         cust_dict.pop(customer.get_email())
         self.customer_info.add_customers(cust_dict)

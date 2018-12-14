@@ -68,11 +68,10 @@ class Print_salesman_menu:
     def car_lists(self, plate, brand, location):
         print("Plate number: {:10}\tBrand: {:10}\tLocation: {:10}".format(plate,brand,location))
 
-    def get_new_pw(self, menu, old_pw):
+    def get_new_pw(self, menu):
         os.system("cls||clear")
         print(self.main_header, end="\n\n")
         print(menu, end="\n\n")
-        print("\t\t\t\tOld password:", old_pw)
         new_pw = input("\t\t\t\tEnter new password: ")
         return new_pw
 

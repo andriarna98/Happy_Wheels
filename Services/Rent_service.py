@@ -177,6 +177,8 @@ class Rent_service:
         return book_num
 
     def add_order_to_dict(self, booking_num, email, plate_num, date_list):
+        """Adds order to order dictionary with all the information from the user input. Also updates order repository with
+        the new dictionary"""
         new_pick_up, drop_off = date_list
         new_order = Order(booking_num, new_pick_up, drop_off, plate_num, email)
         order_dict = self.order_repo.get_orders()
@@ -200,6 +202,7 @@ class Rent_service:
         self.customer_repo.add_customers(customer_dict)
 
     def update_log(self, first_name, last_name, car_obj, date_list):
+        """Updates log repository when a customer books a car"""
         update_repo = self.log_repo
         update_repo.Update_repo("{} {} booked {}, {}. Pick up date: {}, Drop off date {}\n".format(first_name, last_name, car_obj.get_brand(), car_obj.get_plate_number(), date_list[0], date_list[1]))
 

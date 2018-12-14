@@ -109,12 +109,13 @@ class Salesman_controller:
 
                         elif self.__choice == "4":
                             plate_num, brand, size, location = self.__salesman_menu.add_car()
-                            self.__salesman_service.add_car_repo(plate_num, brand, size, location)
-                            self.confirmation_str = "Car"
-                            action = "added"
-                            self.__salesman_menu.confirmation(self.confirmation_str, action)
-                            # Add to log
-                            self.__salesman_service.add_to_log(self.__ID, brand, plate_num)
+                            if plate_num != "p":
+                                self.__salesman_service.add_car_repo(plate_num, brand, size, location)
+                                self.confirmation_str = "Car"
+                                action = "added"
+                                self.__salesman_menu.confirmation(self.confirmation_str, action)
+                                # Add to log
+                                self.__salesman_service.add_to_log(self.__ID, brand, plate_num)
 
                         # Returns results from user's choice (all cars, available cars or unavailable cars)
                         if self.__choice in ["1","2","3"]:
@@ -138,7 +139,7 @@ class Salesman_controller:
 
                 elif choice == "5":
                     self.menu = self.__get_format.password_format()
-                    new_pw = self.__salesman_menu.get_new_pw(self.menu, self.__password)
+                    new_pw = self.__salesman_menu.get_new_pw(self.menu)
                     self.__salesman_service.change_pw(new_pw)
                     Page = 1
                     input("\t\t\tPress enter to continue ")
