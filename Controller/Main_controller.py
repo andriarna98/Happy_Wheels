@@ -21,6 +21,7 @@ class Main_controller:
         self.__get_format = Format_text()
 
     def main_page(self):
+        """Reads choice and directs on a path depending on input"""
         choice = ""
         while choice != "x":
             header, main_menu, choices, underline = self.__get_format.main_menu_format()
