@@ -36,9 +36,9 @@ Tabulate - Install with git. Command:
 
 The following repositories were used for this project
 
-https://github.com/andriarna98/Happy_Wheels
+https://github.com/andriarna98/Happy_Wheels - This repository contains the final product
 
-https://github.com/pker98/Happy-Wheels-V2
+https://github.com/pker98/Happy-Wheels-V2 - This repository contains regular commits 
 
 
 
